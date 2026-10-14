@@ -1,0 +1,208 @@
+
+/* إعدادات عامة للموقع */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Tahoma, Arial, sans-serif;
+    background: #0b1020;
+    color: #f1f5f9;
+    line-height: 1.9;
+}
+
+/* شريط التنقل */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(11, 16, 32, 0.94);
+    border-bottom: 1px solid #263249;
+    backdrop-filter: blur(12px);
+}
+
+nav {
+    max-width: 1100px;
+    margin: auto;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+nav a:first-child {
+    color: #67e8f9;
+    font-size: 19px;
+    font-weight: bold;
+    margin-left: auto;
+}
+
+nav a:hover {
+    color: #67e8f9;
+}
+
+/* مساحة المحتوى */
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 35px 24px 60px;
+}
+
+section {
+    margin-bottom: 28px;
+    padding: 32px;
+    border: 1px solid #263249;
+    border-radius: 20px;
+    background: #111a2e;
+}
+
+h1, h2, h3 {
+    line-height: 1.5;
+}
+
+h1 {
+    max-width: 750px;
+    margin: 12px 0 20px;
+    font-size: clamp(32px, 5vw, 54px);
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-size: 26px;
+    margin-top: 0;
+}
+
+p {
+    color: #aab7cc;
+}
+
+/* الواجهة الرئيسية */
+#home {
+    padding: 65px 40px;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background:
+        radial-gradient(
+            circle at top left,
+            #164e63 0,
+            transparent 45%
+        ),
+        linear-gradient(135deg, #111a2e, #0d1425);
+}
+
+#home > p:first-child {
+    color: #67e8f9;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+#home > p:nth-of-type(2) {
+    max-width: 650px;
+}
+
+/* زر الواجهة */
+#home > a {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 22px;
+    border-radius: 10px;
+    background: #67e8f9;
+    color: #0b1020;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s, background 0.2s;
+}
+
+#home > a:hover {
+    background: #a5f3fc;
+    transform: translateY(-2px);
+}
+
+/* بطاقات المشاريع */
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+#projects h2 {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+#projects article {
+    flex: 1 1 230px;
+    padding: 22px;
+    border: 1px solid #2b3a53;
+    border-radius: 14px;
+    background: #d10d0d;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+#projects article:hover {
+    transform: translateY(-4px);
+    border-color: #67e8f9;
+}
+
+#projects h3 {
+    margin-top: 0;
+    color: #67e8f9;
+}
+
+/* تذييل الموقع */
+footer {
+    padding: 22px;
+    border-top: 1px solid #263249;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* دعم شاشات الجوال */
+@media (max-width: 600px) {
+    nav {
+        justify-content: center;
+        gap: 12px 18px;
+        padding: 14px;
+    }
+
+    nav a:first-child {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    main {
+        padding: 20px 14px 35px;
+    }
+
+    section {
+        padding: 22px 18px;
+        border-radius: 15px;
+    }
+
+    #home {
+        padding: 38px 22px;
+        min-height: 320px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+}
